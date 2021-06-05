@@ -1,0 +1,20 @@
+<form action="" [formGroup]="contacts" (ngSubmit)="submitContacts()">
+    <div>
+      <input formControlName = "name" /> Nome
+      <br>
+      <button (click)="addItem()" type="button" >Adicionar número</button>
+  
+      <ng-container formArrayName="phones">
+        <div *ngFor="let item of phones.controls; index as i">
+          <ng-container [formGroupName]="i">
+            <input formControlName="number" /> Telefone
+          </ng-container>
+  
+          <button (click)="removeItem(i)" type="button" >Remove</button>
+        </div>
+      </ng-container>
+    </div>
+    
+    <button type="submit" >Submeter</button>
+  
+  </form> 

@@ -1,0 +1,14 @@
+<ul>
+    <h3>Telefones dos Contatos </h3>
+    <li *ngFor="let contact of contacts" (click)="contactClicked(contact)">
+        <div style="background-color:rgb(221, 214, 214);">
+            <h4 >{{ contact.name}}</h4>
+        </div>
+        
+        <div *ngFor="let phone of contact.phones">
+            {{ phone.number}} <p>
+        </div> 
+    </li>
+
+</ul>
+<router-outlet></router-outlet>
