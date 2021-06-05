@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -20,7 +21,9 @@ export class ListContactsComponent implements OnInit {
     [{"id": 7,"number": "545434299"},{"id": 8,"number": "80454342"}]
     ]
 
-  constructor(private api:ApiService) {
+  constructor(
+    private api:ApiService,
+    private router:Router) {
     this.getContacts()
    }
 
@@ -40,15 +43,8 @@ export class ListContactsComponent implements OnInit {
   };
 
   contactClicked = (contact: { id: any; }) => {
-    this.api.getContact(contact.id).subscribe(
-      data =>{
-        console.log(data) 
-        this.selected_contact = data
-      },
-      error => {
-        console.log("Aconteceu um erro",error.message);
-      }
-    );
+    this.router.navigate(['contacts-detail', contact.id]);
+    
   };
 
 }
