@@ -9,5 +9,9 @@ class Phone(models.Model):
 class Contact(models.Model):
     name = models.CharField(max_length=40, unique=True)
 
+    # Metadados
+    class Meta:
+        ordering = ['name']
+
     def __str__(self):
         return self.name
