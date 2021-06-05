@@ -11,8 +11,13 @@ export class ApiService {
 
   constructor(private http: HttpClient){ }
 
-  getContact(id: number): Observable<any>{
+  getContact(id: 0): Observable<any>{
     return this.http.get(this.baseUrl + 'contacts/' + id + '/',
+      {headers: this.httpHeaders});
+  };
+
+  updateContact(contact: { id: number; name: string; phones: { id: number; number: string; }[]; }): Observable<any>{
+    return this.http.put(this.baseUrl + 'contacts/' + contact.id + '/', contact,
       {headers: this.httpHeaders});
   };
 }

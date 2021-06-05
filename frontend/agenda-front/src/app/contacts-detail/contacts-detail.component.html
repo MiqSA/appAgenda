@@ -1,5 +1,18 @@
-<p>contacts-detail works!</p>
-
 Contato Carregado: {{ selected_contact.name }}
 
 <p>Select Id {{ selected_id }}</p>
+
+<label>ID</label><br>
+<input type="text" [(ngModel)]=selected_contact.id readonly><br>
+
+<label>Nome  </label><br>
+<input type="text" [(ngModel)]=selected_contact.name><br>
+
+
+<li *ngFor="let contact of selected_contact.phones ; index as i"><br>
+    <label>Telefone {{i}}</label><br>
+    <input type="text" [(ngModel)]=contact.number>
+</li>
+
+<button (click)="update()">Atualizar</button>
+
