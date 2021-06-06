@@ -20,4 +20,9 @@ export class ApiService {
     return this.http.put(this.baseUrl + 'contacts/' + contact.id + '/', contact,
       {headers: this.httpHeaders});
   };
+
+  deleteContact(id:number): Observable<any>{
+    return this.http.delete(this.baseUrl + 'contacts/' + id + '/',
+      {headers: this.httpHeaders});
+  };
 }
