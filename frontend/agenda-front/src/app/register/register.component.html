@@ -1,19 +1,34 @@
+<section>
+<h2>Cadastro de Contatos</h2>
+
+
 <form action="" [formGroup]="contacts" (ngSubmit)="submitContacts()">
-    <div>
-      <input formControlName = "name" /> Nome
+  <div class="row gtr-uniform">
+    <div class="col-12 col-6 col-12-xsmall">
+      <input type="text" name="demo-name" value placeholder = "Nome" formControlName = "name" /> 
       <br>
-      <button (click)="addItem()" type="button" >Adicionar número</button>
-  
+      <button (click)="addItem()" type="button" >Adicionar Telefone</button>
+    </div>
+    <div class="col-6 col-12-xsmall">
       <ng-container formArrayName="phones">
         <div *ngFor="let item of phones.controls; index as i">
           <ng-container [formGroupName]="i">
-            <input formControlName="number" /> Telefone
+            <br>
+            <input type="text" name="demo-name" 
+            value placeholder = "Telefone" formControlName="number" /><br>
           </ng-container>
   
           <button (click)="removeItem(i)" type="button" >Remove</button>
         </div>
       </ng-container>
     </div>
+    <div class="col-12 col-6 col-12-xsmall">
+      <button class="button icon solid fa-save primary" type="submit" value="Salve Contact">Salvar Contato</button>
+    </div>
     
-    <button type="submit" >Submeter</button>
+    
+    
+  </div>
   </form> 
+
+</section>

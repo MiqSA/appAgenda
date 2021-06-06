@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormArrayName, FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class RegisterComponent{
 
   public constructor(
     private api: ApiService,
-    private formBuilder:FormBuilder)
+    private formBuilder:FormBuilder,
+    private router: Router)
     {
     this.contacts = this.formBuilder.group({
       name:'',
@@ -42,7 +44,6 @@ export class RegisterComponent{
   };
 
   public submitContacts() {
-    
     this.api.saveNewContact(this.contacts.value).subscribe(
       data =>{
         console.log(data) 
