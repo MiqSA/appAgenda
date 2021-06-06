@@ -1,19 +1,20 @@
-Contato Carregado: {{ selected_contact.name }}
+<h1>{{ selected_contact.name }}</h1>
 
-<p>Select Id {{ selected_id }}</p>
-
-<label>ID</label><br>
+<label>ID do Contato</label><br>
 <input type="text" [(ngModel)]=selected_contact.id readonly><br>
 
-<label>Nome  </label><br>
+<label>Nome</label><br>
 <input type="text" [(ngModel)]=selected_contact.name><br>
 
 
 <li *ngFor="let contact of selected_contact.phones ; index as i"><br>
     <label>Telefone {{i}}</label><br>
-    <input type="text" [(ngModel)]=contact.number>
+    <input type="text" [(ngModel)]=contact.number><br>
 </li>
 
-<button (click)="update()">Atualizar</button>
-<button (click)="delete()">Deletar</button>
+<div align="right">
+    <button class="button primary" (click)="update()">Atualizar Contato</button>
+    <button class="button" (click)="delete()">Deletar Contato</button>
+</div>
+
 
