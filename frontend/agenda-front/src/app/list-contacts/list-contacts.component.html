@@ -1,8 +1,8 @@
 <ul>
-    <h3>Telefones dos Contatos </h3>
-    <li *ngFor="let contact of contacts" (click)="contactClicked(contact)">
-        <div style="background-color:rgb(221, 214, 214);">
-            <h4 >{{ contact.name}}</h4>
+    <h2>Meus Contatos </h2>
+    <li *ngFor="let contact of contacts">
+        <div class="button fit" style="background-color:rgba(181, 198, 244, 0.363);">
+            <h4 (click)="contactClicked(contact)">{{ contact.name}}</h4>
         </div>
         
         <div *ngFor="let phone of contact.phones">
