@@ -63,7 +63,7 @@ $ pip install -r requirements.txt
 $ python manage.py migrate
 
 # Subir aplicação API-REST
-$ python manage.py runsever
+$ python manage.py runserver
 
 # Aplicação estará rodando em http://localhost/8000/
 
@@ -77,12 +77,3 @@ $ python manage.py runsever
  $ ng server
 
 # Aplicação estará rodando em http://localhost/4200/
-
-
-
-
-
-
-
-
-
