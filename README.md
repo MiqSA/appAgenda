@@ -26,8 +26,23 @@ Responsável pelo consumo da API REST. Entre as funcionalidades básicas, destac
 <img src="frontend/to_readme/app_working.gif">
 </p>
 
+## Demonstração do Funcionamento da API REST.
 
-## Tecnologias Utilizadas
+Endpoints: 
+- Método listar (GET) e adicionar contatos (POST). Não é permitido inserir um telefone já cadastrado: http://localhost:8000/contacts/
+
+- Método atualizar (PUT) e deletar contato (DEL): http://localhost:8000/contacts/id/
+
+
+
+Testes da API no Postman:
+
+<p align="center">
+<img src="frontend/to_readme/back_working.gif">
+</p>
+
+
+## Tecnologias
 
 - [Angular](https://angular.io/)
 - [NodeJs](https://nodejs.org/en/)
@@ -36,7 +51,7 @@ Responsável pelo consumo da API REST. Entre as funcionalidades básicas, destac
 - [POSTMAN](https://www.postman.com/)
 - [Python](https://www.python.org/)
 
-## Como utilizar
+## Como Utilizar?
 
 Para clonar essa aplicação, você precisará ter instalado em seu computador: [Git](https://git-scm.com) para clonar o repositório. Para o front-end: [Angular](https://angular.io/) e [NodeJs](https://nodejs.org/en/). Para o back-end: [Python](https://www.python.org/),  [Django](https://www.djangoproject.com/) e [Django REST Framework](https://www.django-rest-framework.org/). Do ser terminal digite:
 
@@ -44,7 +59,7 @@ Para clonar essa aplicação, você precisará ter instalado em seu computador: 
 # Clonar esse repositório
 $ git clone https://github.com/MiqSA/appAgenda.git
 
-# Entrar no repositório
+# Entrar no pasta do projeto
 $ cd appAgenda
 
 # Entrar na pasta do back-end
@@ -65,7 +80,7 @@ $ python manage.py migrate
 # Subir aplicação API-REST
 $ python manage.py runserver
 
-# Aplicação estará rodando em http://localhost/8000/
+# API REST estará disponível em http://localhost/8000/
 
 # Em outra janela do terminal vá para pasta do front-end
  $ cd front-end/agenda-front
@@ -76,4 +91,4 @@ $ python manage.py runserver
 # Inicie o servidor
  $ ng server
 
-# Aplicação estará rodando em http://localhost/4200/
+# Aplicação estará disponível em http://localhost/4200/
