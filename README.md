@@ -1,4 +1,8 @@
 # 📲 Agenda Telefônica
+![GitHub language count](https://img.shields.io/github/languages/count/MiqSA/appAgenda)
+![PyPI - Django Version](https://img.shields.io/pypi/djversions/djangorestframework)
+![GitHub](https://img.shields.io/github/license/MiqSA/appAgenda)
+
 
 Essa aplicação contempla as funcionalidades básicas de uma agenda de contatos telefônicos.
 
